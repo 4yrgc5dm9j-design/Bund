@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bundeswehr</title>
+  <meta name="description" content="Bundeswehr – News, Standortkarte, Fahrzeuge, Schiffe und Luftfahrzeuge, Karrieresimulator, Gefechtssimulator und mehr.">
+  <meta name="theme-color" content="#1b1d1f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Bundeswehr">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="flag-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="Bundeswehr – Startseite">
+      <svg class="brand-cross" viewBox="0 0 100 100" aria-hidden="true"><use href="#tatzenkreuz"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">Bundeswehr</span>
+        <span class="brand-claim">Wir. Dienen. Deutschland.</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="themeToggle" aria-label="Farbschema wechseln" title="Farbschema wechseln">
+      <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+    </button>
+  </header>
+
+  <div class="layout">
+    <nav class="sidenav" id="nav" aria-label="Hauptnavigation"></nav>
+    <main id="view" tabindex="-1"></main>
+  </div>
+
+  <nav class="tabbar" id="tabbar" aria-label="Schnellnavigation"></nav>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Schließen">&times;</button>
+    <button class="lightbox-prev" aria-label="Vorheriges Bild">&#8249;</button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lightbox-next" aria-label="Nächstes Bild">&#8250;</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Tatzenkreuz (Eisernes Kreuz) als Hoheitszeichen-Stilmittel -->
+      <symbol id="tatzenkreuz" viewBox="0 0 100 100">
+        <path fill="#fff" d="M38 0h24l-4 30q0 6 6 6l36-4v36l-36-4q-6 0-6 6l4 30H38l4-30q0-6-6-6L0 68V32l36 4q6 0 6-6z"/>
+        <path fill="#111" d="M42 5h16l-3 26q0 9 9 9l31-3v26l-31-3q-9 0-9 9l3 26H42l3-26q0-9-9-9l-31 3V37l31 3q9 0 9-9z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="vendor/leaflet/leaflet.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

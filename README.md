@@ -31,7 +31,7 @@ Auf dem Handy über „Zum Startbildschirm hinzufügen“ als App installieren. 
 
 ### Veröffentlichen
 
-Der Workflow `.github/workflows/pages.yml` veröffentlicht die App bei jedem Push auf `main` über GitHub Pages
+Der Workflow `.github/workflows/pages.yml` veröffentlicht die App bei jedem Push auf `main` bzw. den Standard-Branch über GitHub Pages
 (in den Repository-Einstellungen unter *Pages* als Quelle „GitHub Actions“ wählen).
 
 ## Aufbau
